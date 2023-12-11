@@ -1,0 +1,8 @@
+<div class="container">
+  @if (showText) {
+    <h1>Yes, its true!</h1>
+  } @else {
+    <h1>Not true!</h1>
+  }
+  <button (click)="showText = !showText">Click me</button>
+</div>

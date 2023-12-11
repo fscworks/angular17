@@ -1,0 +1,24 @@
+<h1>Deferrable Views</h1>
+<p>
+  Deferrable views are views that are not evaluated until they are used. This is
+  useful for views that are expensive to compute or that may not be needed
+  during the normal course of operation.
+</p>
+
+@defer {
+  <app-large></app-large>
+} @loading (minimum 2s) {
+  <app-loading-spinner></app-loading-spinner>
+}
+
+<p>Scroll down to see viewport loading</p>
+
+<div class="vh-50"></div>
+
+@defer (on viewport) {
+  <app-large></app-large>
+} @placeholder {
+  <span>Loading..</span>
+} @loading (minimum 2s) {
+  <app-loading-spinner></app-loading-spinner>
+}

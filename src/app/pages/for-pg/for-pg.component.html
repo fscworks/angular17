@@ -1,0 +1,17 @@
+<div class="container">
+  <button (click)="arrayOfItems = []">Empty list!</button>
+  @for (item of arrayOfItems; track item.id) {
+    <div class="card">
+      <div class="card-header">
+        <div class="card-header-title">
+          {{ item.name }}
+        </div>
+      </div>
+      <div class="card-body">
+        {{ item.description }}
+      </div>
+    </div>
+  } @empty {
+    <h3>There are no items in the list!</h3>
+  }
+</div>

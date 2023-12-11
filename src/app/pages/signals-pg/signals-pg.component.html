@@ -1,0 +1,20 @@
+<div class="container">
+  <span class="text">Counter: {{ counter() }}</span>
+  <span class="text">Computed: {{ computedCounter() }}</span>
+  <button (click)="increment()">Increment</button>
+</div>
+
+<div class="container">
+  <form [formGroup]="form" class="row">
+    <input type="number" formControlName="counterInput" />
+    <button (click)="setCounter(form.value.counterInput)">Set</button>
+  </form>
+</div>
+
+<div class="container">
+  <code>
+    @for (line of effectLines; track line) {
+      <span>{{ line }}</span>
+    }
+  </code>
+</div>

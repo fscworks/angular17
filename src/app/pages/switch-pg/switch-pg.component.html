@@ -1,0 +1,19 @@
+<div class="container">
+  @switch (color) {
+    @case (colorsEnum.red) {
+      <div class="text red">Text</div>
+    }
+    @case (colorsEnum.blue) {
+      <div class="text blue">Text</div>
+    }
+    @case (colorsEnum.green) {
+      <div class="text green">Text</div>
+    }
+  }
+
+  <div class="row">
+    <button (click)="color = colorsEnum.red">Red</button>
+    <button (click)="color = colorsEnum.blue">Blue</button>
+    <button (click)="color = colorsEnum.green">Green</button>
+  </div>
+</div>

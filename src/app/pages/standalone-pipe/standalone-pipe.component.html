@@ -1,0 +1,9 @@
+<div class="container">
+  <form [formGroup]="form" class="container">
+    <span>Whats your name?</span>
+    <input formControlName="customerName" />
+  </form>
+  @if (form.value.customerName) {
+    <h1>Capitalise: {{ form.value.customerName | capitalise }}</h1>
+  }
+</div>
