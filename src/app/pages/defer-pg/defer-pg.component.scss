@@ -3,7 +3,7 @@
   border-radius: 10px;
 }
 
-.test-container {
+.wrap {
   position: relative;
   display: inline-block;
   padding-bottom: 1.125em;
@@ -13,11 +13,11 @@
   }
 }
 
-.test-a {
+.wrap-nav {
   display: inline-block;
 }
 
-.test-b {
+.wrap-content {
   text-overflow: ellipsis;
   white-space: nowrap;
   position: absolute;
