@@ -1,0 +1,16 @@
+<h2>
+  The next block showcases the error function, switch your browser to offline
+  mode!
+</h2>
+
+<div class="vh-50"></div>
+
+@defer (on viewport) {
+  <app-large></app-large>
+} @placeholder {
+  <span>Not yet loaded!</span>
+} @loading (minimum 2s) {
+  <app-loading-spinner></app-loading-spinner>
+} @error {
+  <span class="error-text">Failed to load!</span>
+}

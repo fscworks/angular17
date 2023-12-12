@@ -4,6 +4,24 @@
   useful for views that are expensive to compute or that may not be needed
   during the normal course of operation.
 </p>
+<div class="container">
+  <div class="nav-bar">
+    <a routerLink="idle" routerLinkActive="active">Idle</a>
+    <a routerLink="timer" routerLinkActive="active">Timer</a>
+    <a routerLink="interaction" routerLinkActive="active">Interaction</a>
+    <a routerLink="interaction-prefetched" routerLinkActive="active"
+      >Interaction (prefetched)</a
+    >
+    <a routerLink="interaction-inputs" routerLinkActive="active"
+      >Interaction - Inputs and Buttons</a
+    >
+    <a routerLink="viewport" routerLinkActive="active">Viewport</a>
+    <a routerLink="error" routerLinkActive="active">Error</a>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
+<!--
 
 @defer {
   <app-large></app-large>
@@ -11,14 +29,93 @@
   <app-loading-spinner></app-loading-spinner>
 }
 
+<hr />
+
+<h2>Show after 10s, prefetch after 5s</h2>
+@defer (on timer(6s); prefetch on timer(5s)) {
+  <app-large></app-large>
+} @placeholder {
+  <span>Not yet loaded!</span>
+} @loading {
+  <app-loading-spinner></app-loading-spinner>
+}
+
+<hr />
+
+<h2>On Interaction (click the placeholder) - not prefetched</h2>
+
+@defer (on interaction) {
+  <app-large></app-large>
+} @placeholder {
+  <span>Not yet loaded!</span>
+} @loading (minimum 2s) {
+  <app-loading-spinner></app-loading-spinner>
+}
+
+<hr />
+
+<h2>On Interaction (click the placeholder) - already prefetched</h2>
+
+@defer (on interaction; prefetch on idle) {
+  <app-large></app-large>
+} @placeholder {
+  <span>Not yet loaded!</span>
+} @loading (minimum 2s) {
+  <app-loading-spinner></app-loading-spinner>
+}
+
+<hr />
+
+<h2>Prefetch when typing, show when button clicked</h2>
+
+<div class="container">
+  <input
+    type="text"
+    class="form-control"
+    placeholder="Type to prefetch"
+    #prefetchInput
+  />
+  <button #buttonToShow>Show</button>
+</div>
+
+@defer (on interaction(buttonToShow); prefetch on interaction(prefetchInput)) {
+  <app-large></app-large>
+} @placeholder {
+  <span>Not yet loaded!</span>
+} @loading (minimum 2s) {
+  <app-loading-spinner></app-loading-spinner>
+}
+
+<hr />
+
 <p>Scroll down to see viewport loading</p>
+
+<div class="vh-50"></div>
+
+<h2>Load when in viewport</h2>
+
+@defer (on viewport) {
+  <app-large></app-large>
+} @placeholder {
+  <span>Not yet loaded!</span>
+} @loading (minimum 2s) {
+  <app-loading-spinner></app-loading-spinner>
+}
+
+<p>
+  The next block showcases the error function, switch your browser to offline
+  mode!
+</p>
 
 <div class="vh-50"></div>
 
 @defer (on viewport) {
   <app-large></app-large>
 } @placeholder {
-  <span>Loading..</span>
+  <span>Not yet loaded!</span>
 } @loading (minimum 2s) {
   <app-loading-spinner></app-loading-spinner>
+} @error {
+  <span class="error-text">Failed to load!</span>
 }
+-->

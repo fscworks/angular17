@@ -22,6 +22,62 @@ export const routes: Routes = [
       import('./pages/defer-pg/defer-pg.component').then(
         (c) => c.DeferPgComponent,
       ),
+    children: [
+      {
+        path: '',
+        redirectTo: 'idle',
+        pathMatch: 'full',
+      },
+      {
+        path: 'idle',
+        loadComponent: () =>
+          import(
+            './pages/defer-pg/childs/defer-idle/defer-idle.component'
+          ).then((c) => c.DeferIdleComponent),
+      },
+      {
+        path: 'timer',
+        loadComponent: () =>
+          import(
+            './pages/defer-pg/childs/defer-timer/defer-timer.component'
+          ).then((c) => c.DeferTimerComponent),
+      },
+      {
+        path: 'interaction',
+        loadComponent: () =>
+          import(
+            './pages/defer-pg/childs/defer-interaction/defer-interaction.component'
+          ).then((c) => c.DeferInteractionComponent),
+      },
+      {
+        path: 'interaction-prefetched',
+        loadComponent: () =>
+          import(
+            './pages/defer-pg/childs/defer-interaction-prefetched/defer-interaction-prefetched.component'
+          ).then((c) => c.DeferInteractionPrefetchedComponent),
+      },
+      {
+        path: 'interaction-inputs',
+        loadComponent: () =>
+          import(
+            './pages/defer-pg/childs/defer-interaction-inputs/defer-interaction-inputs.component'
+          ).then((c) => c.DeferInteractionInputsComponent),
+      },
+      {
+        path: 'viewport',
+        loadComponent: () =>
+          import(
+            './pages/defer-pg/childs/defer-viewport/defer-viewport.component'
+          ).then((c) => c.DeferViewportComponent),
+      },
+      {
+        path: 'error',
+        loadComponent: () =>
+          import(
+            './pages/defer-pg/childs/defer-error/defer-error.component'
+          ).then((c) => c.DeferErrorComponent),
+      },
+    ],
   },
   {
     path: 'switch-syntax',

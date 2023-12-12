@@ -1,0 +1,19 @@
+<h2>Prefetch when typing, show when button clicked</h2>
+
+<div class="container">
+  <input
+    type="text"
+    class="form-control"
+    placeholder="Type to prefetch"
+    #prefetchInput
+  />
+  <button #buttonToShow>Show</button>
+</div>
+
+@defer (on interaction(buttonToShow); prefetch on interaction(prefetchInput)) {
+  <app-large></app-large>
+} @placeholder {
+  <span>Not yet loaded!</span>
+} @loading (minimum 2s) {
+  <app-loading-spinner></app-loading-spinner>
+}
