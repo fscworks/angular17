@@ -109,3 +109,10 @@ input {
   height: 100vh;
   background-color: var(--secondary-color);
 }
+
+.placeholder {
+  display: inline-block;
+  border: 1px solid green;
+  font-size: larger;
+  padding: 20px;
+}

@@ -2,3 +2,29 @@
   width: fit-content;
   border-radius: 10px;
 }
+
+.test-container {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 1.125em;
+
+  @media (max-width: 1010px) {
+    position: inherit;
+  }
+}
+
+.test-a {
+  display: inline-block;
+}
+
+.test-b {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  position: absolute;
+  left: 0;
+  right: 0;
+
+  @media (max-width: 1010px) {
+    padding: 20px;
+  }
+}

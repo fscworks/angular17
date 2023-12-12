@@ -4,6 +4,7 @@
   useful for views that are expensive to compute or that may not be needed
   during the normal course of operation.
 </p>
+<!--
 <div class="container">
   <div class="nav-bar">
     <a routerLink="idle" routerLinkActive="active">Idle</a>
@@ -20,6 +21,32 @@
     <a routerLink="error" routerLinkActive="active">Error</a>
     <a routerLink="custom" routerLinkActive="active">Custom</a>
   </div>
+  <div class="router">
+    <router-outlet></router-outlet>
+  </div>
 </div>
-
-<router-outlet></router-outlet>
+-->
+<div class="container">
+  <div class="test-container">
+    <div class="test-a">
+      <div class="nav-bar">
+        <a routerLink="idle" routerLinkActive="active">Idle</a>
+        <a routerLink="timer" routerLinkActive="active">Timer</a>
+        <a routerLink="hover" routerLinkActive="active">Hover</a>
+        <a routerLink="interaction" routerLinkActive="active">Interaction</a>
+        <a routerLink="interaction-prefetched" routerLinkActive="active"
+          >Interaction (prefetched)</a
+        >
+        <a routerLink="interaction-inputs" routerLinkActive="active"
+          >Interaction - Inputs and Buttons</a
+        >
+        <a routerLink="viewport" routerLinkActive="active">Viewport</a>
+        <a routerLink="error" routerLinkActive="active">Error</a>
+        <a routerLink="custom" routerLinkActive="active">Custom</a>
+      </div>
+    </div>
+    <div class="test-b">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

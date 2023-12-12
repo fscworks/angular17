@@ -3,7 +3,7 @@
 @defer (on timer(10s); prefetch on timer(5s)) {
   <app-large></app-large>
 } @placeholder {
-  <span>Not yet loaded!</span>
+  <span class="placeholder">Not yet loaded!</span>
 } @loading {
   <app-loading-spinner></app-loading-spinner>
 }

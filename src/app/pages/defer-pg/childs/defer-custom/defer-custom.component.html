@@ -13,7 +13,7 @@
   @defer (when performDisplay; prefetch when performPrefetch) {
     <app-large></app-large>
   } @placeholder {
-    <span>Not yet loaded!</span>
+    <span class="placeholder">Not yet loaded!</span>
   } @loading (minimum 2s) {
     <app-loading-spinner></app-loading-spinner>
   }
