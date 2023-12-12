@@ -1,0 +1,20 @@
+<h2>Custom triggers</h2>
+
+<p>Type in 'prefetch' or 'display'</p>
+
+<div class="container">
+  <form [formGroup]="form">
+    <input type="text" formControlName="triggerInput" />
+  </form>
+
+  <span>PerformPrefetch: {{ performPrefetch }}</span>
+  <span>PerformDisplay: {{ performDisplay }}</span>
+
+  @defer (when performDisplay; prefetch when performPrefetch) {
+    <app-large></app-large>
+  } @placeholder {
+    <span>Not yet loaded!</span>
+  } @loading (minimum 2s) {
+    <app-loading-spinner></app-loading-spinner>
+  }
+</div>

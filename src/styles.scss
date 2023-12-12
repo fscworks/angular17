@@ -79,7 +79,7 @@ input {
   justify-content: center;
 
   // navbar for mobile
-  @media (max-width: 768px) {
+  @media (max-width: 1010px) {
     flex-direction: column;
     gap: 0;
     height: auto;

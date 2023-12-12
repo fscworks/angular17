@@ -1,4 +1,5 @@
 <h2>Show after 10s, prefetch after 5s</h2>
+<h3>Timer: {{ $timer() }}</h3>
 @defer (on timer(10s); prefetch on timer(5s)) {
   <app-large></app-large>
 } @placeholder {

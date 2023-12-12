@@ -1,0 +1,8 @@
+<h2>Load on hover</h2>
+@defer (on hover) {
+  <app-large></app-large>
+} @placeholder {
+  <span>Not yet loaded!</span>
+} @loading (minimum 2s) {
+  <app-loading-spinner></app-loading-spinner>
+}

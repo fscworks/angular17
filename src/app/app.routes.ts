@@ -4,7 +4,7 @@ export const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    redirectTo: 'for-syntax',
+    redirectTo: 'deferrable-views',
   },
   {
     path: 'for-syntax',
@@ -17,7 +17,7 @@ export const routes: Routes = [
       import('./pages/if-pg/if-pg.component').then((c) => c.IfPgComponent),
   },
   {
-    path: 'defer-syntax',
+    path: 'deferrable-views',
     loadComponent: () =>
       import('./pages/defer-pg/defer-pg.component').then(
         (c) => c.DeferPgComponent,
@@ -76,6 +76,20 @@ export const routes: Routes = [
           import(
             './pages/defer-pg/childs/defer-error/defer-error.component'
           ).then((c) => c.DeferErrorComponent),
+      },
+      {
+        path: 'hover',
+        loadComponent: () =>
+          import(
+            './pages/defer-pg/childs/defer-hover/defer-hover.component'
+          ).then((c) => c.DeferHoverComponent),
+      },
+      {
+        path: 'custom',
+        loadComponent: () =>
+          import(
+            './pages/defer-pg/childs/defer-custom/defer-custom.component'
+          ).then((c) => c.DeferCustomComponent),
       },
     ],
   },
