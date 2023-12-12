@@ -15,7 +15,7 @@ export class DeferCustomComponent {
   performDisplay = false;
 
   form = new FormGroup({
-    triggerInput: new FormControl<string>('', {
+    triggerInput: new FormControl('', {
       validators: [],
       nonNullable: true,
     }),

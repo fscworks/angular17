@@ -78,7 +78,6 @@ input {
   font-size: larger;
   justify-content: center;
 
-  // navbar for mobile
   @media (max-width: 1010px) {
     flex-direction: column;
     gap: 0;
@@ -88,7 +87,6 @@ input {
     }
   }
 
-  // nav bar item
   > a {
     color: #fff;
     text-decoration: none;

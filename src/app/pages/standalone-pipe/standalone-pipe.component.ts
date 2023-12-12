@@ -11,7 +11,7 @@ import { CapitalisePipe } from './capitalise.pipe';
 })
 export class StandalonePipeComponent {
   form = new FormGroup({
-    customerName: new FormControl<string>('', {
+    customerName: new FormControl('', {
       validators: [],
       nonNullable: true,
     }),
