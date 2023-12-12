@@ -31,4 +31,8 @@ Open your browser to [http://localhost:4200](http://localhost:4200) to see the a
 
 - **New @-Syntax:** Discover the enhanced declarative power of the new `@` syntax in Angular 17. Stay up-to-date with the latest syntax improvements for more readable and maintainable code.
 
+- **Router Lazy Loading:** Learn how to implement router lazy loading to optimize your application's loading time. Lazy loading allows you to load modules only when they are requested, improving initial page load performance.
+
+- **Signals:** Explore the new signals feature in Angular 17, allowing you to easily manage and respond to events in your application. Learn how to use signals to create a more responsive and interactive user experience.
+
 Happy Testing! 🧡✨
